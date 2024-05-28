@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "@mantine/form";
-import { TextInput, Button } from "@mantine/core";
+
+import { TextInput, Button, Drawer } from "@mantine/core";
 import "@mantine/core/styles.css";
 import "@mantine/core/styles/Button.css";
 function Form() {
@@ -22,9 +23,12 @@ function Form() {
   return (
     <>
       <form
-        onSubmit={form.onSubmit(console.log)}
+        onSubmit={form.onSubmit((values) => {
+          console.log("values", values);
+        })}
         style={{
-          border: "5px solid #5C000E",
+          backgroundColor: "#1f2021",
+          color: "White",
           position: "absolute",
           textAlign: "center",
           display: "flex",
@@ -54,7 +58,7 @@ function Form() {
           mt="sm"
           type="submit"
           variant="filled"
-          color="#A10018"
+          color="#1c436b"
           style={{ color: "White" }}
         >
           Submit
