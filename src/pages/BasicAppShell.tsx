@@ -3,6 +3,7 @@ import { AppShell, Burger, Text, useMantineTheme } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Form from "./Form";
 import Program from "./Program";
+import { TimeLine } from "./TimeLine";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 
 function BasicAppShell() {
@@ -61,6 +62,22 @@ function BasicAppShell() {
             <Text
               component={Link}
               variant="link"
+              to="/time_line"
+              style={{
+                display: "inline-block",
+                padding: "15px 30px",
+                border: "2px solid White",
+                backgroundColor: "#1c436b",
+                textAlign: "center",
+                fontFamily: "Verdana",
+                fontSize: "15px",
+              }}
+            >
+              TimeLine
+            </Text>
+            <Text
+              component={Link}
+              variant="link"
               to="/form"
               style={{
                 display: "inline-block",
@@ -95,6 +112,7 @@ function BasicAppShell() {
         <Routes>
           <Route path="/form" element={<Form />} />
           <Route path="/program" element={<Program />} />
+          <Route path="/time_line" element={<TimeLine />} />
         </Routes>
       </AppShell>
     </Router>
