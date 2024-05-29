@@ -5,7 +5,7 @@ import { useState } from "react";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 dayjs.extend(dayOfYear); 
 
-export function Timeline() {
+export function TimeLine() {
   const [year, setYear] = useState("2023");
   const locale:any = "ltr";
   const ChevronOptionBack = {
